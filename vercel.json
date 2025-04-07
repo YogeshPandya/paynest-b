@@ -1,26 +1,16 @@
 {
-    "version": 2,
-    "env":{
-      "MONGO_URI":"mongodb+srv://yogeshpandyaujjain:IREmzhD1r3ee4P3q@cluster0.ultlwqi.mongodb.net/paynest-db?retryWrites=true&w=majority&appName=Cluster0",
-      "JWT_SECRET":"abcdefghihklmnopqurstuvwxyz0987654321"
-    },
-    "builds": [
-      {
-        "src": "src/main.ts",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "src/main.ts",
-        "methods":[
-          "GET",
-          "POST",
-          "PUT",
-          "DELETE"
-        ]
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds":[
+    {
+      "src":"src/main.ts",
+      "use":"@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/main.ts",
+      "methods":["GET","POST","PUT","DELETE"]
+    }
+  ]
+}
