@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express'; // ✅ fixed here
 import * as i18n from 'i18n';
 
 const app = express();
